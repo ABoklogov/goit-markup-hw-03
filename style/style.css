@@ -17,6 +17,7 @@
   --banner-background-color: #2f303a;
   --commands-background-color: #f5f4fa;
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
+  --portfolio-item-border-color: #eeeeee;
   --main-family: 'Roboto', sans-serif;
   --logo-faily: 'Raleway', sans-serif;
 }
@@ -39,22 +40,40 @@ body {
 a {
   text-decoration: none;
 }
-/* -------------------------/COMPONENTS------------------------- */
 
-/* -------------------------HEADER------------------------------ */
 .container {
   width: 1200px;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid tomato;
 }
+/* -------------------------/COMPONENTS------------------------- */
 
+/* -------------------------HEADER------------------------------ */
+/* -----header-components----- */
+.menu,
+.site-nav,
+.header-main {
+  display: flex;
+}
+.header-main {
+  justify-content: space-between;
+  align-items: center;
+}
+.header-main .menu {
+  align-items: center;
+}
+.site-nav .site-nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+/* -----/header-components----- */
 /* ------site logo------ */
 .logo {
+  margin-right: 93px;
+
   font-family: var(--logo-faily);
-  font-weight: bold;
+  font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -66,9 +85,16 @@ a {
 
 /* ------site nav------*/
 .site-nav .link {
+  display: block;
+  padding: 32px 0;
   color: var(--title-color);
 }
-
+.contacts-nav {
+  display: flex;
+}
+.contacts-nav li:not(:last-child) {
+  margin-right: 50px;
+}
 .site-nav .link,
 .contacts-nav a {
   font-weight: 500;
@@ -102,23 +128,33 @@ a {
 /* -------------------------STUDIO------------------------------- */
 /* -----banner----- */
 .banner {
+  padding: 200px 0;
   background-color: var(--banner-background-color);
   text-align: center;
-  margin-bottom: 94px;
-  outline: 2px solid tomato;
 }
+.subbanner {
+  background-color: var(--banner-background-color);
+}
+
 .banner-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 696px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-white);
-  margin-top: 0;
-  margin-bottom: 30px;
 }
 
 .banner-btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -128,48 +164,72 @@ a {
   background-color: var(--hover-color);
 }
 
-/* -----advantages (преимущества)----- */
+/* -----преимущества----- */
 .advantages {
-  margin-bottom: 94px;
+  padding: 94px 0;
 }
-
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+}
+.advantages-list li {
+  width: 270px;
+}
 .advantages h3 {
+  margin-top: 0;
+  margin-bottom: 10;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-color);
-  margin-top: 0;
 }
 .advantages p {
-  color: var(--text-color);
   margin-bottom: 0;
+  margin-top: 0;
+  color: var(--text-color);
 }
 
 /* -----чем занимаемся----- */
 .lessons {
-  margin-bottom: 94px;
+  padding-bottom: 94px;
 }
-
 .lessons-title,
 .comands-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-color);
-  margin-top: 0;
-  margin-bottom: 50px;
+}
+.lessons-site {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* -----commands (команда)----- */
 .comands {
-  background-color: var(--commands-background-color);
   padding-bottom: 94px;
   padding-top: 94px;
-  outline: 2px solid tomato;
+  background-color: var(--commands-background-color);
+}
+.comands .comands-list {
+  display: flex;
+  justify-content: space-between;
+}
+.comands .comands-list > li {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.comands li {
+  text-align: center;
 }
 .comands h3 {
   font-weight: 500;
@@ -192,8 +252,25 @@ a {
 /* -------------------------/STUDIO------------------------------- */
 
 /* ------------------------PORTFOLIO------------------------------ */
+/* ----portfolio-companents----- */
+.portfolio {
+  padding: 94px 0;
+}
+.portfolio .portfolio-items {
+  display: flex;
+  justify-content: center;
+}
+
 /* ---------portfolio button--------- */
+.portfolio .portfolio-items-button:not(:last-child) {
+  margin-right: 8px;
+  margin-bottom: 50px;
+}
 .portfolio .portfolio-btn {
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: var(--commands-background-color);
+
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -207,9 +284,32 @@ a {
 .portfolio .portfolio-btn:focus {
   background-color: var(--hover-color);
   color: var(--color-white);
+  border: var(--hover-color);
 }
 /* ---------portfolio list ---------*/
+.portfolio-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+.portfolio-box .portfolio-list {
+  width: 370px;
+  height: 402px;
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc(100% / 3 - 30px);
+}
+.portfolio-box-aside {
+  padding: 20px 24px;
+  border: 1px solid var(--portfolio-item-border-color);
+}
+.portfolio-list img {
+  display: block;
+}
 .portfolio .portfolio-list-title {
+  margin: 0 0 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -217,6 +317,9 @@ a {
   color: var(--title-color);
 }
 .portfolio .portfolio-list-text {
+  margin-top: 0;
+  margin-bottom: 0;
+
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
@@ -226,9 +329,9 @@ a {
 
 /* ----------------------------FOOTER---------------------------- */
 .footer {
-  background-color: var(--banner-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: var(--banner-background-color);
 }
 .footer .logo-white {
   display: inline-block;
@@ -237,12 +340,12 @@ a {
 }
 
 .footer .address {
+  margin-bottom: 9px;
   font-style: normal;
   color: var(--color-white);
-  margin-bottom: 9px;
 }
 
-.footer-contacts li:first-child {
+.footer-contacts li:not(:last-child) {
   margin-bottom: 9px;
   display: inline-block;
 }
@@ -254,5 +357,5 @@ a {
 .footer-contacts a:focus,
 .footer-contacts a:visited {
   color: var(--hover-color);
-  /* ----------------------------FOOTER--------------------------- */
 }
+/* ----------------------------FOOTER--------------------------- */
