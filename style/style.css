@@ -155,6 +155,9 @@ a {
   width: 200px;
   height: 50px;
   border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-color: transparent;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -226,7 +229,7 @@ a {
 .comands .comands-list > li {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+  border-radius: 4px;
   background: var(--color-white);
 }
 .comands li {
@@ -287,6 +290,8 @@ a {
   background-color: var(--hover-color);
   color: var(--color-white);
   border: var(--hover-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /* ---------portfolio list ---------*/
 .portfolio-box {
@@ -305,6 +310,7 @@ a {
 .portfolio-box-aside {
   padding: 20px 24px;
   border: 1px solid var(--portfolio-item-border-color);
+  border-top: transparent;
 }
 .portfolio-list img {
   display: block;
