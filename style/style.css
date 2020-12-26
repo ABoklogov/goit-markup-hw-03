@@ -297,15 +297,19 @@ a {
 .portfolio-box {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+  margin: -15px;
+
+  /* margin-left: -30px;
+  margin-top: -30px; */
 }
 .portfolio-box .portfolio-list {
   width: 370px;
-  height: 402px;
-  margin-left: 30px;
-  margin-top: 30px;
-  flex-basis: calc(100% / 3 - 30px);
+  height: 404px;
+  margin: 15px;
+
+  /* margin-left: 30px; */
+  /* margin-top: 30px;
+  flex-basis: calc(100% / 3 - 30px); */
 }
 .portfolio-box-aside {
   padding: 20px 24px;
