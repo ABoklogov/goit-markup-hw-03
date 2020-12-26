@@ -132,16 +132,15 @@ a {
   background-color: var(--banner-background-color);
   text-align: center;
 }
-.subbanner {
-  background-color: var(--banner-background-color);
-}
 
+.banner .container-content {
+  max-width: 696px;
+  margin-right: auto;
+  margin-left: auto;
+}
 .banner-title {
   margin-top: 0;
   margin-bottom: 30px;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 696px;
 
   font-weight: 900;
   font-size: 44px;
@@ -232,9 +231,12 @@ a {
   border-radius: 4px;
   background: var(--color-white);
 }
-.comands li {
+
+.comands .commands-container {
+  padding: 30px;
   text-align: center;
 }
+
 .comands h3 {
   font-weight: 500;
   color: var(--title-color);
@@ -242,14 +244,11 @@ a {
 .comands h3,
 .comands p {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 0;
 
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-}
-.comands img {
-  margin-bottom: 30px;
 }
 .comands .subtitle {
   margin-bottom: 10px;
@@ -264,12 +263,12 @@ a {
 .portfolio .portfolio-items {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 /* ---------portfolio button--------- */
 .portfolio .portfolio-items-button:not(:last-child) {
   margin-right: 8px;
-  margin-bottom: 50px;
 }
 .portfolio .portfolio-btn {
   padding: 6px 22px;
@@ -298,18 +297,10 @@ a {
   display: flex;
   flex-wrap: wrap;
   margin: -15px;
-
-  /* margin-left: -30px;
-  margin-top: -30px; */
 }
 .portfolio-box .portfolio-list {
   width: 370px;
-  height: 404px;
   margin: 15px;
-
-  /* margin-left: 30px; */
-  /* margin-top: 30px;
-  flex-basis: calc(100% / 3 - 30px); */
 }
 .portfolio-box-aside {
   padding: 20px 24px;
