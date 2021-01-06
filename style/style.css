@@ -48,6 +48,12 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 /* -------------------------/COMPONENTS------------------------- */
 
 /* -------------------------HEADER------------------------------ */
@@ -86,7 +92,6 @@ a {
 /* ------site nav------*/
 .site-nav .link {
   display: block;
-  padding: 32px 0;
   color: var(--title-color);
 }
 .contacts-nav {
@@ -97,6 +102,7 @@ a {
 }
 .site-nav .link,
 .contacts-nav a {
+  padding: 32px 0;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -307,9 +313,7 @@ a {
   border: 1px solid var(--portfolio-item-border-color);
   border-top: transparent;
 }
-.portfolio-list img {
-  display: block;
-}
+
 .portfolio .portfolio-list-title {
   margin: 0 0 4px;
 
